@@ -55,7 +55,7 @@ submitBtn.onclick = function () {
 }
 
 function displayFiveDay(place) {
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + place + "&APPID=73992cc9ca3be289cda14818a6b5b1e7";
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + place + "&APPID=73992cc9ca3be289cda14818a6b5b1e7";
     //var queryURL2 = "http://api.openweathermap.org/data/2.5/uvi/forcast?q=" + place + "&APPID=73992cc9ca3be289cda14818a6b5b1e7";
 
    
@@ -84,7 +84,7 @@ function displayFiveDay(place) {
                 
                 var date = $("<p>").text(list[i].dt_txt.split(" ")[0])
                 var icon = $("<img>")
-                icon.attr("src", "http://openweathermap.org/img/wn/" + list[i].weather[0].icon + ".png")
+                icon.attr("src", "https://openweathermap.org/img/wn/" + list[i].weather[0].icon + ".png")
                 var humidity = $("<p>").text("humidity: " + list[i].main.humidity + "%");
                 var c = Math.floor(response.list[0].main.temp - 273.15) + " &#8451;";
                 var temperature = $("<p>").html("temp: " + c);
