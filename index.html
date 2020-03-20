@@ -1,97 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css" type="text/css">
 
     <title>Weather App Dashboard</title>
 
+
 </head>
-    <div class="header">
-        <h1>Weather Dashbord App</h1>
-      </div>
-  
-  
 <body>
-    <div class="container1">
-        <div class="col-2">
-        <h5>Search for a city</h5>
-        <input type="text" id="text"><br>
-        <button id="submit">Search</button>
-        <button id="clear">clear previous search contents</button>
+    <div class="header">
+        <h1>Weather Dashboard App</h1>
+    </div>
+    <div class="container">
+        <!--<div class="video-container">
+        <video autoplay loop muted>
+            <source src="https://thumbs.gfycat.com/DeadlyEmotionalArcherfish-mobile.mp4">
+        </video>
+        </div>-->
 
-        <div class="current-weather-container">
-            <div class="current-weather-icon">
-                <div class="current-date">
-                    <p></p>
+        <div class="row-container">
+            <div class="col-12">
+                <h5>Search for a city</h5>
+                <input type="text" id="text"><br>
+                <button id="submit">Search</button>
+                <button id="clear">clear search history</button>
+            </div>
+            <div class="col-sm-4">
+                <div id="searchHistory"></div>
+            </div>
+
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="location">
+                            <div class="date"></div>
+                            <div class="place"></div>
+                            <div class="weather-icon"></div>
+                            <div class="temperature"></div>
+                            <div class="humidity"></div>
+                            <div class="wind-speed"></div>
+                            <div class="UV-index"></div>
+                        </div>
+                    </div>
                 </div>
-                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="">
             </div>
-            <div id="location">
-                <p></p>
-            </div>
-    </div>
-    </div>
+            
+                    <div class="col-12">
+                        <h4>5 Day Weather Forecast</h4>
+                        <div id="forecast"></div>
+                    </div>
+                </div>
 
+        </div>
+    </div>
+</div>
+
+    <!-- <div class="col-2">
+
+    </div>
     <div class="container2">
-        <div id="location">
-            <div class="date"></div>
-            <div class="place"></div>
-            <div class="weather-icon"></div>
-            <div class="temperature"></div>
-            <div class="humidity"></div>
-            <div class="wind-speed"></div>
-            <div class="UV-index"></div>         
-    </div>
+
     </div>
 
-    <h4>5 Day Weather Forecast</h4>
+
     <div class="container3">
         <div class="row">
-        <div class="col-2">
-            <div class="date0" id="date0"></div> 
-            <div class="weather-icon0"></div>
-            <div class="temperature0"></div>
-            <div class="humidity0"></div>
+            <div class="col-2">
+                <div class="date0" id="date0"></div>
+                <div class="weather-icon0"></div>
+                <div class="temperature0"></div>
+                <div class="humidity0"></div>
+            </div>
+            <div class="col-2">
+                <div class="date1" id="date1"></div>
+                <div class="weather-icon1"></div>
+                <div class="temperature1"></div>
+                <div class="humidity1"></div>
+            </div>
+            <div class="col-2">
+                <div class="date2" id="date2"></div>
+                <div class="weather-icon2"></div>
+                <div class="temperature2"></div>
+                <div class="humidity2"></div>
+            </div>
+            <div class="col-2">
+                <div class="date3" id="date3"></div>
+                <div class="weather-icon3"></div>
+                <div class="temperature3"></div>
+                <div class="humidity3"></div>
+
+            </div>
+            <div class="col-2">
+                <div class="date4" id="date4"></div>
+                <div class="weather-icon4"></div>
+                <div class="temperature4"></div>
+                <div class="humidity4"></div>
+
+
+            </div>
         </div>
-        <div class="col-2">
-            <div class="date1" id="date1"></div>
-            <div class="weather-icon1"></div>
-            <div class="temperature1"></div>
-            <div class="humidity1"></div>
-        </div>
-        <div class="col-2">
-            <div class="date2" id="date2"></div>
-            <div class="weather-icon2"></div>
-            <div class="temperature2"></div>
-            <div class="humidity2"></div>
-        </div>
-        <div class="col-2">
-            <div class="date3" id="date3"></div>
-            <div class="weather-icon3"></div>
-            <div class="temperature3"></div>
-            <div class="humidity3"></div>
-            
-          </div>
-          <div class="col-2">
-            <div class="date4" id="date4"></div>
-            <div class="weather-icon4"></div>
-            <div class="temperature4"></div>
-            <div class="humidity4"></div>
-            
-            
-          </div>
-      </div>
-  
+    </div> -->
+
 
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
